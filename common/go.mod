@@ -1,4 +1,4 @@
-module github.com/go-zero-mall/common
+module github.com/292292yang/go-zero-mall/common
 
 go 1.26.3
 

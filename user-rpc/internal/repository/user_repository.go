@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/292292yang/go-zero-mall/common/cryptx"
+	"github.com/292292yang/go-zero-mall/common/errorx"
 	sq "github.com/Masterminds/squirrel"
 	"github.com/go-sql-driver/mysql"
-	"github.com/go-zero-mall/common/cryptx"
-	"github.com/go-zero-mall/common/errorx"
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 )

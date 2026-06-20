@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/go-zero-mall/common/errorx"
+	"github.com/292292yang/go-zero-mall/common/errorx"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

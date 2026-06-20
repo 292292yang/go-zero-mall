@@ -3,11 +3,11 @@ package logic
 import (
 	"context"
 
-	"github.com/go-zero-mall/common/cryptx"
-	"github.com/go-zero-mall/common/errorx"
-	"github.com/go-zero-mall/user-rpc/internal/repository"
-	"github.com/go-zero-mall/user-rpc/internal/svc"
-	"github.com/go-zero-mall/user-rpc/user"
+	"github.com/292292yang/go-zero-mall/common/cryptx"
+	"github.com/292292yang/go-zero-mall/common/errorx"
+	"github.com/292292yang/go-zero-mall/user-rpc/internal/repository"
+	"github.com/292292yang/go-zero-mall/user-rpc/internal/svc"
+	"github.com/292292yang/go-zero-mall/user-rpc/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

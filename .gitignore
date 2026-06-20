@@ -1,0 +1,46 @@
+# 编译二进制
+*.exe
+*.out
+*.test
+*.prof
+bin/
+dist/
+build/
+
+# Go module 缓存、测试覆盖率
+*.cover
+*.log
+vendor/ # 不使用vendor可注释掉
+
+# GoLand / JetBrains IDE 缓存
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VSCode 兼容
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.bak
+tmp/
+temp/
+
+# CGO 编译中间文件
+_obj/
+_test/
+*.o
+*.a
+
+# 日志、本地配置
+logs/
+*.log
+config.local.yaml
+config.dev.json

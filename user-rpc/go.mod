@@ -1,10 +1,6 @@
-module github.com/go-zero-mall/user-rpc
+module github.com/292292yang/go-zero-mall/user-rpc
 
 go 1.26.3
-
-require github.com/go-zero-mall/common v0.0.0
-
-replace github.com/go-zero-mall/common => ../common
 
 require (
 	github.com/Masterminds/squirrel v1.5.4
