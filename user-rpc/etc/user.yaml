@@ -6,7 +6,7 @@ JwtAuth:
   AccessExpire: 86400
 
 Mysql:
-  DataSource: "root:123456@tcp(127.0.0.1:3306)/gozero_mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+  DataSource: "root:123456@tcp(127.0.0.1:3306)/gozero-mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
 
 CacheRedis:
   Host: 127.0.0.1:6379

@@ -3,6 +3,7 @@ module github.com/292292yang/go-zero-mall/user-rpc
 go 1.26.3
 
 require (
+	github.com/292292yang/go-zero-mall/common v0.0.0-20260620050745-1a6b8710a889
 	github.com/Masterminds/squirrel v1.5.4
 	github.com/go-sql-driver/mysql v1.10.0
 	github.com/zeromicro/go-zero v1.10.2

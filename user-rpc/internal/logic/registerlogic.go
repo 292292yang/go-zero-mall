@@ -44,6 +44,9 @@ func (l *RegisterLogic) Register(in *user.RegisterReq) (*user.RegisterResp, erro
 		Avatar:   in.Avatar,
 		Status:   0,
 	})
+	if err != nil {
+		return nil, err
+	}
 	return &user.RegisterResp{
 		UserId: int64(userId),
 	}, nil

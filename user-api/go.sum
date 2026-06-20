@@ -1,3 +1,5 @@
+github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260620044733-f33c7ebdbc7a h1:GCBZW4tvrrem++R8Yk4as7kN+7BYKx1b88IgqprDvbQ=
+github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260620044733-f33c7ebdbc7a/go.mod h1:UP0+Hb+BL1TE8O/+OSWWKkviPedi8kmwP5ME1DzndDE=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=
 github.com/alicebob/miniredis/v2 v2.38.0/go.mod h1:TcL7YfarKPGDAthEtl5NBeHZfeUQj6OXMm/+iu5cLMM=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
