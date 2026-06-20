@@ -5,7 +5,6 @@ package user
 
 import (
 	"context"
-
 	"user-api/internal/svc"
 	"user-api/internal/types"
 
@@ -27,7 +26,7 @@ func NewRegisterLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Register
 }
 
 func (l *RegisterLogic) Register(req *types.RegisterReq) (resp *types.RegisterResp, err error) {
-	l.svcCtx.UserRpc.
+	//l.svcCtx.UserRp
 
 	return
 }

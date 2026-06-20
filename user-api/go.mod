@@ -2,7 +2,7 @@ module user-api
 
 go 1.26.3
 
-require github.com/go-zero-mall/user-rpc v0.0.0
+require github.com/292292yang/go-zero-mall/user-rpc v0.0.0
 
 require github.com/zeromicro/go-zero v1.10.2
 
