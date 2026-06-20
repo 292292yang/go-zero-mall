@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "./user";
+
+message RegisterReq {
+  string username = 1;
+  string password = 2;
+  string nickname = 3;
+  string Avatar = 4;
+}
+
+message RegisterResp {
+  int64 user_id = 1;
+}
+
+message LoginReq {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginResp {
+  int64 user_id = 1;
+}
+
+message GetUserReq {
+  int64 user_id = 1;
+}
+
+message GetUserResp {
+  int64 user_id = 1;
+  string username = 2;
+  string nickname = 3;
+  string avatar = 4;
+  int64 status = 5;
+}
+
+message CheckUserAvailableReq {
+  int64 user_id = 1;
+}
+
+message CheckUserAvailableResp {
+  bool available = 1;
+  string message = 2;
+}
+
+service User {
+  rpc Register(RegisterReq) returns (RegisterResp);
+  rpc Login(LoginReq) returns (LoginResp);
+  rpc GetUser(GetUserReq) returns (GetUserResp);
+  rpc CheckUserAvailable(CheckUserAvailableReq) returns (CheckUserAvailableResp);
+}

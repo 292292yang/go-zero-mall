@@ -1,0 +1,15 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8888
+
+Auth:
+  AccessSecret: "go-zero-mall-user-secret"
+  AccessExpire: 86400
+
+UserRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: /zrpc/service/user.rpc
+  NonBlock: true
+  Timeout: 3000

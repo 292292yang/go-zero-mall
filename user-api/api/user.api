@@ -1,0 +1,56 @@
+syntax = "v1"
+
+info (
+	title:   "User API"
+	desc:    "拆分后的用户 HTTP API"
+	author:  "go-zero mall"
+	version: "1.0"
+)
+
+type (
+	RegisterReq {
+		Username string `json:"username"`
+		Password string `json:"password"`
+		Nickname string `json:"nickname,optional"`
+	}
+	RegisterResp {
+		UserId int64 `json:"userId"`
+	}
+	LoginReq {
+		Username string `json:"username"`
+		Password string `json:"password"`
+	}
+	LoginResp {
+		Token    string `json:"token"`
+		ExpireAt int64  `json:"expireAt"`
+	}
+	ProfileResp {
+		Id       int64  `json:"id"`
+		Username string `json:"username"`
+		Nickname string `json:"nickname"`
+		Avatar   string `json:"avatar"`
+	}
+)
+
+@server (
+	prefix: /api/v1
+	group:  user
+)
+service user-api {
+	@handler RegisterHandler
+	post /user/register (RegisterReq) returns (RegisterResp)
+
+	@handler LoginHandler
+	post /user/login (LoginReq) returns (LoginResp)
+}
+
+@server (
+	prefix: /api/v1
+	group:  user
+	jwt:    Auth
+)
+service user-api {
+	@handler ProfileHandler
+	get /user/profile returns (ProfileResp)
+}
+
