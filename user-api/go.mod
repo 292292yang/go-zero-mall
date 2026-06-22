@@ -1,4 +1,4 @@
-module user-api
+module github.com/292292yang/go-zero-mall/user-api
 
 go 1.26.3
 

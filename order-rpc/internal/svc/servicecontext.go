@@ -1,9 +1,8 @@
 package svc
 
 import (
-	"order-rpc/internal/config"
-	"order-rpc/internal/repository"
-
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/config"
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/repository"
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 )

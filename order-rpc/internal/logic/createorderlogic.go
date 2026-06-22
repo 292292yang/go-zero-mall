@@ -2,11 +2,10 @@ package logic
 
 import (
 	"context"
-	"order-rpc/internal/repository"
 
-	"order-rpc/internal/svc"
-	"order-rpc/order"
-
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/repository"
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/svc"
+	"github.com/292292yang/go-zero-mall/order-rpc/order"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
