@@ -16,6 +16,7 @@ type ServiceContext struct {
 	Config     config.Config
 	UserRpc    userclient.User
 	ProductRpc productclient.Product
+	OrderRpc   orderclient.Order
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
@@ -23,5 +24,6 @@ func NewServiceContext(c config.Config) *ServiceContext {
 		Config:     c,
 		UserRpc:    userclient.NewUser(zrpc.MustNewClient(c.UserRpc)),
 		ProductRpc: productclient.NewProduct(zrpc.MustNewClient(c.ProductRpc)),
+		OrderRpc:   orderclient.NewOrder(zrpc.MustNewClient(c.OrderRpc)),
 	}
 }

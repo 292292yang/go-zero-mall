@@ -9,6 +9,7 @@ import (
 	"user-api/internal/svc"
 	"user-api/internal/types"
 
+	"github.com/292292yang/go-zero-mall/order-rpc/orderclient"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -27,6 +28,6 @@ func NewOrderCreateLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Order
 }
 
 func (l *OrderCreateLogic) OrderCreate(req *types.OrderCreateReq) (resp *types.OrderCreateResp, err error) {
-	
+	l.svcCtx.OrderRpc.CreateOrder(l.ctx, &orderclient.CreateOrderReq{})
 	return
 }

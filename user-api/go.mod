@@ -10,7 +10,10 @@ require (
 	google.golang.org/grpc v1.81.1 // indirect
 )
 
-require github.com/292292yang/go-zero-mall/product-rpc v0.0.0-20260622055047-c8ec71324be7
+require (
+	github.com/292292yang/go-zero-mall/order-rpc v0.0.0-20260622114558-e6f73ce963d0
+	github.com/292292yang/go-zero-mall/product-rpc v0.0.0-20260622055047-c8ec71324be7
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect

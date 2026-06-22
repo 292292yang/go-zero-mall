@@ -1,5 +1,7 @@
 github.com/292292yang/go-zero-mall/common v0.0.0-20260622055047-c8ec71324be7 h1:a8jsQS7LXjDKV8RYZ85blR4k5qPVHsA2ZMj+Y5Z7Djc=
 github.com/292292yang/go-zero-mall/common v0.0.0-20260622055047-c8ec71324be7/go.mod h1:QbiJkzWJKqHAgB6ItxpbPx+I43tfszgoWhrmBul8JKQ=
+github.com/292292yang/go-zero-mall/order-rpc v0.0.0-20260622114558-e6f73ce963d0 h1:qmww/gJOXg5hYr/wBsDOh24ydJP6K8buMAVjfpFlMNw=
+github.com/292292yang/go-zero-mall/order-rpc v0.0.0-20260622114558-e6f73ce963d0/go.mod h1:Zb30cTwL9XQzNh+Tw0hOidKUVHwSHWeDYs7xQtDfNQI=
 github.com/292292yang/go-zero-mall/product-rpc v0.0.0-20260622055047-c8ec71324be7 h1:NT4+kPmZNDloqm0hA3/wk66d5WwEdkpWlf+gVtzOsTU=
 github.com/292292yang/go-zero-mall/product-rpc v0.0.0-20260622055047-c8ec71324be7/go.mod h1:gawVyvdZpvwkqIRHHerxt1albXx30tIY+hYEmE1JZwA=
 github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260622055047-c8ec71324be7 h1:hT9Yfr1EElFGrpoHFwX2sEw9uuIpcgvYpyq4XpQOCNA=
