@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package product;
+
+option go_package = "./product";
+
+message ProductInfo {
+  int64 product_id = 1;
+  string name = 2;
+  string description = 3;
+  int64 price = 4;
+  int64 stock = 5;
+  int64 status = 6;
+}
+
+message CreateProductReq {
+  string name = 1;
+  string description = 2;
+  int64 price = 3;
+  int64 stock = 4;
+}
+
+message CreateProductResp {
+  int64 product_id = 1;
+}
+
+message GetProductReq {
+  int64 product_id = 1;
+}
+
+message GetProductResp {
+  ProductInfo product = 1;
+}
+
+message ListProductReq {
+  string keyword = 1;
+  int64 page = 2;
+  int64 page_size = 3;
+}
+
+message ListProductResp {
+  repeated ProductInfo list = 1;
+  int64 total = 2;
+}
+
+message CheckStockReq {
+  int64 product_id = 1;
+  int64 quantity = 2;
+}
+
+message CheckStockResp {
+  bool enough = 1;
+  string message = 2;
+}
+
+message DeductStockReq {
+  int64 product_id = 1;
+  int64 quantity = 2;
+  string request_id = 3;
+}
+
+message DeductStockResp {
+  bool success = 1;
+}
+
+service Product {
+  rpc CreateProduct(CreateProductReq) returns (CreateProductResp);
+  rpc GetProduct(GetProductReq) returns (GetProductResp);
+  rpc ListProduct(ListProductReq) returns (ListProductResp);
+  rpc CheckStock(CheckStockReq) returns (CheckStockResp);
+  rpc DeductStock(DeductStockReq) returns (DeductStockResp);
+}

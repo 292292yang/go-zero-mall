@@ -34,6 +34,7 @@ func (l *RegisterLogic) Register(req *types.RegisterReq) (resp *types.RegisterRe
 		Avatar:   "",
 	})
 	if err != nil {
+		l.Infof("用户注册出错，错误信息: %v", err)
 		return nil, err
 	}
 	return &types.RegisterResp{

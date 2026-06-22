@@ -45,6 +45,7 @@ func (l *RegisterLogic) Register(in *user.RegisterReq) (*user.RegisterResp, erro
 		Status:   0,
 	})
 	if err != nil {
+		l.Infof("创建用户失败，错误信息: %v", err)
 		return nil, err
 	}
 	return &user.RegisterResp{

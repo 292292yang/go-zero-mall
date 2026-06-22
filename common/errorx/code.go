@@ -20,11 +20,12 @@ const (
 	OrderStatusInvalid int64 = 40002
 	OrderCreateFailed  int64 = 40003
 
-	PaymentNotFound      int64 = 50001
-	PaymentStatusInvalid int64 = 50002
-	PaymentCallbackError int64 = 50003
+	PaymentNotFound       int64 = 50001
+	PaymentAlreadyExists  int64 = 50002
+	PaymentAlreadySuccess int64 = 50003
+	PaymentStatusInvalid  int64 = 50004
 
 	ServerError       int64 = 90001
-	ServiceBusy       int64 = 90002
+	RpcError          int64 = 90002
 	DownstreamFailure int64 = 90003
 )

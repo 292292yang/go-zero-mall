@@ -1,8 +1,13 @@
 package errorx
 
+import (
+	"errors"
+	"fmt"
+)
+
 type CodeError struct {
-	Code int64  `json:"code"`
-	Msg  string `json:"message"`
+	Code int64
+	Msg  string
 }
 
 func NewCodeError(code int64, msg string) error {
@@ -13,9 +18,15 @@ func NewCodeError(code int64, msg string) error {
 }
 
 func (e *CodeError) Error() string {
-	return e.Msg
+	return fmt.Sprintf("%d:%s", e.Code, e.Msg)
 }
 
-func (e *CodeError) Data() *CodeError {
-	return e
+func FromError(err error) (*CodeError, bool) {
+	if err == nil {
+		return nil, false
+	}
+
+	var e *CodeError
+	ok := errors.As(err, &e)
+	return e, ok
 }
