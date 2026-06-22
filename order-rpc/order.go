@@ -4,11 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"order-rpc/internal/config"
-	"order-rpc/internal/server"
-	"order-rpc/internal/svc"
-	"order-rpc/order"
-
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/config"
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/server"
+	"github.com/292292yang/go-zero-mall/order-rpc/internal/svc"
+	"github.com/292292yang/go-zero-mall/order-rpc/order"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
