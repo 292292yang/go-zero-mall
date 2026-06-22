@@ -1,0 +1,26 @@
+Name: order.rpc
+ListenOn: 0.0.0.0:8080
+
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: /zrpc/service/order.rpc
+
+Mysql:
+  DataSource: "root:123456@tcp(127.0.0.1:3306)/gozero_mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+
+UserRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: /zrpc/service/user.rpc
+  NonBlock: true
+  Timeout: 3000
+
+ProductRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: /zrpc/service/product.rpc
+  NonBlock: true
+  Timeout: 3000
