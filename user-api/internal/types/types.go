@@ -13,6 +13,29 @@ type LoginResp struct {
 	ExpireAt int64  `json:"expireAt"`
 }
 
+type OrderCreateReq struct {
+	UserId    int64 `json:"userId"`
+	ProductId int64 `json:"productId"`
+	Price     int64 `json:"price"`
+	Quatity   int64 `json:"quatity"`
+}
+
+type OrderCreateResp struct {
+	OrderId int64 `json:"orderId"`
+}
+
+type ProductCreateReq struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Price       int64  `json:"price"`
+	Stock       int64  `json:"stock"`
+	Status      int64  `json:"status"`
+}
+
+type ProductCreateResp struct {
+	ProductId int64 `json:"productId"`
+}
+
 type ProfileResp struct {
 	Id       int64  `json:"id"`
 	Username string `json:"username"`

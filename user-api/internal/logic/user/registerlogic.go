@@ -37,7 +37,7 @@ func (l *RegisterLogic) Register(req *types.RegisterReq) (resp *types.RegisterRe
 	})
 	if err != nil {
 		l.Errorf("call order rpc CreateOrder failed, err=%v", err)
-		return nil, rpcx.ConvertRpcError(err, errorx.OrderCreateFailed, "创建订单失败")
+		return nil, rpcx.ConvertRpcError(err, errorx.UserDisabled, "用户注册失败")
 	}
 	return &types.RegisterResp{
 		UserId: registerResp.UserId,

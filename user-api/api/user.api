@@ -30,6 +30,25 @@ type (
 		Nickname string `json:"nickname"`
 		Avatar   string `json:"avatar"`
 	}
+	ProductCreateReq {
+		Name        string `json:"name"`
+		Description string `json:"description"`
+		Price       int64  `json:"price"`
+		Stock       int64  `json:"stock"`
+		Status      int64  `json:"status"`
+	}
+	ProductCreateResp {
+		ProductId int64 `json:"productId"`
+	}
+	OrderCreateReq {
+		UserId    int64 `json:"userId"`
+		ProductId int64 `json:"productId"`
+		Price     int64 `json:"price"`
+		Quatity   int64 `json:"quatity"`
+	}
+	OrderCreateResp {
+		OrderId int64 `json:"orderId"`
+	}
 )
 
 @server (
@@ -52,5 +71,25 @@ service user-api {
 service user-api {
 	@handler ProfileHandler
 	get /user/profile returns (ProfileResp)
+}
+
+@server (
+	prefix: /api/v1
+	group:  product
+	jwt:    Auth
+)
+service user-api {
+	@handler ProductCreateHandler
+	post /product/create (ProductCreateReq) returns (ProductCreateResp)
+}
+
+@server (
+	prefix: /api/v1
+	group:  order
+	jwt:    Auth
+)
+service user-api {
+	@handler OrderCreateHandler
+	post /order/create (OrderCreateReq) returns (OrderCreateResp)
 }
 

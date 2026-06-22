@@ -6,6 +6,8 @@ package handler
 import (
 	"net/http"
 
+	order "user-api/internal/handler/order"
+	product "user-api/internal/handler/product"
 	user "user-api/internal/handler/user"
 	"user-api/internal/svc"
 
@@ -13,6 +15,30 @@ import (
 )
 
 func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/order/create",
+				Handler: order.OrderCreateHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/api/v1"),
+	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/product/create",
+				Handler: product.ProductCreateHandler(serverCtx),
+			},
+		},
+		rest.WithJwt(serverCtx.Config.Auth.AccessSecret),
+		rest.WithPrefix("/api/v1"),
+	)
+
 	server.AddRoutes(
 		[]rest.Route{
 			{

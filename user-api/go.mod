@@ -3,12 +3,14 @@ module user-api
 go 1.26.3
 
 require (
-	github.com/292292yang/go-zero-mall/common v0.0.0-20260622024920-7acfe57fd089
-	github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260620044733-f33c7ebdbc7a
-	github.com/go-zero-mall/user-rpc v0.0.0-00010101000000-000000000000
+	github.com/292292yang/go-zero-mall/common v0.0.0-20260622055047-c8ec71324be7
+	github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260622055047-c8ec71324be7
+	// 只依赖仓库根模块，不要拆分common/user-rpc单独require
 	github.com/zeromicro/go-zero v1.10.2
-	google.golang.org/grpc v1.81.1
+	google.golang.org/grpc v1.81.1 // indirect
 )
+
+require github.com/292292yang/go-zero-mall/product-rpc v0.0.0-20260622055047-c8ec71324be7
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -101,4 +103,5 @@ require (
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
 
-replace github.com/go-zero-mall/user-rpc => ../user-rpc
+// 修正replace：根模块本地替换，统一读取本地仓库最新代码
+replace github.com/292292yang/go-zero-mall => ../

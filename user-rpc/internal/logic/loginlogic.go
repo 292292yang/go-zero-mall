@@ -3,6 +3,8 @@ package logic
 import (
 	"context"
 
+	"github.com/292292yang/go-zero-mall/common/cryptx"
+	"github.com/292292yang/go-zero-mall/common/errorx"
 	"github.com/292292yang/go-zero-mall/user-rpc/internal/svc"
 	"github.com/292292yang/go-zero-mall/user-rpc/user"
 
@@ -24,7 +26,14 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 }
 
 func (l *LoginLogic) Login(in *user.LoginReq) (*user.LoginResp, error) {
-	// todo: add your logic here and delete this line
-
-	return &user.LoginResp{}, nil
+	userModel, err := l.svcCtx.UserRepository.FindByUsername(l.ctx, in.Username)
+	if err != nil {
+		return nil, err
+	}
+	if cryptx.CheckPassword(in.Password, userModel.Password) {
+		return nil, errorx.NewCodeError(errorx.UserInvalidPassword, "username or password error")
+	}
+	return &user.LoginResp{
+		UserId: userModel.Id,
+	}, nil
 }

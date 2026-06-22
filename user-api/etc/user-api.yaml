@@ -20,3 +20,19 @@ UserRpc:
     Key: /zrpc/service/user.rpc
   NonBlock: true
   Timeout: 3000
+
+ProductRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: /zrpc/service/product.rpc
+  NonBlock: true
+  Timeout: 3000
+
+OrderRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: /zrpc/service/order.rpc
+  NonBlock: true
+  Timeout: 3000
