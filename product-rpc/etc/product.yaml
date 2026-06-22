@@ -1,0 +1,19 @@
+Name: product.rpc
+ListenOn: 0.0.0.0:8090
+
+JwtAuth:
+  AccessSecret: "go-zero-mall-user-secret"
+  AccessExpire: 86400
+
+Mysql:
+  DataSource: "root:123456@tcp(127.0.0.1:3306)/gozero-mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+
+CacheRedis:
+  Host: 127.0.0.1:6379
+  Type: node
+  Pass: ""
+
+Etcd:
+  Hosts:
+    - 127.0.0.1:2379
+  Key: /zrpc/service/product.rpc
