@@ -1,7 +1,7 @@
 filippo.io/edwards25519 v1.2.0 h1:crnVqOiS4jqYleHd9vaKZ+HKtHfllngJIiOpNpoJsjo=
 filippo.io/edwards25519 v1.2.0/go.mod h1:xzAOLCNug/yB62zG1bQ8uziwrIqIuxhctzJT18Q77mc=
-github.com/292292yang/go-zero-mall/common v0.0.0-20260620050745-1a6b8710a889 h1:WY0eaMCDwe/26t3v8p/FZcyZOACQCGeEVwTFb6a+v+A=
-github.com/292292yang/go-zero-mall/common v0.0.0-20260620050745-1a6b8710a889/go.mod h1:QbiJkzWJKqHAgB6ItxpbPx+I43tfszgoWhrmBul8JKQ=
+github.com/292292yang/go-zero-mall/common v0.0.0-20260622024920-7acfe57fd089 h1:5rWTEMe7Lkz/Yl/9ZrkcN/6cWJG19h8HfyDRMknegsQ=
+github.com/292292yang/go-zero-mall/common v0.0.0-20260622024920-7acfe57fd089/go.mod h1:QbiJkzWJKqHAgB6ItxpbPx+I43tfszgoWhrmBul8JKQ=
 github.com/DATA-DOG/go-sqlmock v1.5.2 h1:OcvFkGmslmlZibjAjaHm3L//6LiuBgolP7OputlJIzU=
 github.com/DATA-DOG/go-sqlmock v1.5.2/go.mod h1:88MAG/4G7SMwSE3CeA0ZKzrT5CiOU3OJ+JlNzwDqpNU=
 github.com/Masterminds/squirrel v1.5.4 h1:uUcX/aBc8O7Fg9kaISIUsHXdKuqehiXAMQTYX8afzqM=

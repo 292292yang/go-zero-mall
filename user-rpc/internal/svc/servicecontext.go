@@ -1,6 +1,7 @@
 package svc
 
 import (
+	"github.com/292292yang/go-zero-mall/common/rpcinterceptor"
 	"github.com/292292yang/go-zero-mall/user-rpc/internal/config"
 	"github.com/292292yang/go-zero-mall/user-rpc/internal/repository"
 	"github.com/zeromicro/go-zero/core/stores/redis"
@@ -9,10 +10,11 @@ import (
 )
 
 type ServiceContext struct {
-	Config         config.Config
-	Redis          *redis.Redis
-	RpcServerOpts  []grpc.ServerOption
-	UserRepository repository.UserRepository
+	Config config.Config
+	Redis  *redis.Redis
+	// 存放所有Unary拦截器
+	UnaryInterceptors []grpc.UnaryServerInterceptor
+	UserRepository    repository.UserRepository
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
@@ -21,8 +23,8 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	return &ServiceContext{
 		Config: c,
 		// 注册全局拦截器
-		RpcServerOpts: []grpc.ServerOption{
-			grpc.UnaryInterceptor(RpcErrorInterceptor),
+		UnaryInterceptors: []grpc.UnaryServerInterceptor{
+			rpcinterceptor.RpcErrorInterceptor,
 		},
 		UserRepository: repository.NewUserRepository(conn, rds),
 	}

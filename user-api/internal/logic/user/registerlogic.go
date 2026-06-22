@@ -8,6 +8,8 @@ import (
 	"user-api/internal/svc"
 	"user-api/internal/types"
 
+	"github.com/292292yang/go-zero-mall/common/errorx"
+	"github.com/292292yang/go-zero-mall/common/rpcx"
 	"github.com/292292yang/go-zero-mall/user-rpc/user"
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -34,8 +36,8 @@ func (l *RegisterLogic) Register(req *types.RegisterReq) (resp *types.RegisterRe
 		Avatar:   "",
 	})
 	if err != nil {
-		l.Infof("用户注册出错，错误信息: %v", err)
-		return nil, err
+		l.Errorf("call order rpc CreateOrder failed, err=%v", err)
+		return nil, rpcx.ConvertRpcError(err, errorx.OrderCreateFailed, "创建订单失败")
 	}
 	return &types.RegisterResp{
 		UserId: registerResp.UserId,

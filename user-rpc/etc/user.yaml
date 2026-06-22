@@ -1,6 +1,13 @@
 Name: user.rpc
 ListenOn: 0.0.0.0:8080
 
+# 日志配置
+Log:
+  Mode: console       # 输出位置：console控制台、file文件、volume容器卷
+  Encoding: plain     # 编码格式：json（默认） / plain（普通文本）
+  Level: info         # 日志级别：debug、info、error、severe
+  ServiceName: user.rpc
+
 JwtAuth:
   AccessSecret: "go-zero-mall-user-secret"
   AccessExpire: 86400

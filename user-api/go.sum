@@ -1,5 +1,5 @@
-github.com/292292yang/go-zero-mall/common v0.0.0-20260620050745-1a6b8710a889 h1:WY0eaMCDwe/26t3v8p/FZcyZOACQCGeEVwTFb6a+v+A=
-github.com/292292yang/go-zero-mall/common v0.0.0-20260620050745-1a6b8710a889/go.mod h1:QbiJkzWJKqHAgB6ItxpbPx+I43tfszgoWhrmBul8JKQ=
+github.com/292292yang/go-zero-mall/common v0.0.0-20260622024920-7acfe57fd089 h1:5rWTEMe7Lkz/Yl/9ZrkcN/6cWJG19h8HfyDRMknegsQ=
+github.com/292292yang/go-zero-mall/common v0.0.0-20260622024920-7acfe57fd089/go.mod h1:QbiJkzWJKqHAgB6ItxpbPx+I43tfszgoWhrmBul8JKQ=
 github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260620044733-f33c7ebdbc7a h1:GCBZW4tvrrem++R8Yk4as7kN+7BYKx1b88IgqprDvbQ=
 github.com/292292yang/go-zero-mall/user-rpc v0.0.0-20260620044733-f33c7ebdbc7a/go.mod h1:UP0+Hb+BL1TE8O/+OSWWKkviPedi8kmwP5ME1DzndDE=
 github.com/alicebob/miniredis/v2 v2.38.0 h1:nZAzCR+Lj+Vxk4ZXzm2NuKq2O33RXj1XxJ2e2uP9jiw=

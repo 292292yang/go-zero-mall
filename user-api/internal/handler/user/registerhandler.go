@@ -4,6 +4,7 @@
 package user
 
 import (
+	"fmt"
 	"net/http"
 
 	"user-api/internal/logic/user"
@@ -12,6 +13,7 @@ import (
 
 	"github.com/292292yang/go-zero-mall/common/response"
 	"github.com/zeromicro/go-zero/rest/httpx"
+	"google.golang.org/grpc/status"
 )
 
 func RegisterHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -21,9 +23,12 @@ func RegisterHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 			response.Fail(w, err)
 			return
 		}
-
 		l := user.NewRegisterLogic(r.Context(), svcCtx)
 		resp, err := l.Register(&req)
+		l.Errorf("err:%v", err)
+		st, ok := status.FromError(err)
+		fmt.Println("是否grpc错误:", ok)
+		fmt.Println("desc原文:", st.Message())
 		if err != nil {
 			response.Fail(w, err)
 		} else {
